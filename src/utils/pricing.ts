@@ -5,24 +5,24 @@ import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
 const WETH_ADDRESS = '0x4200000000000000000000000000000000000006'
-const WETH_USDC_03_POOL = '0x1deDEC1C905f087ED4B521E96f81CC2E38B62327'
+const WETH_USDC_03_POOL = '0x1dedec1c905f087ed4b521e96f81cc2e38b62327'
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with
 export let WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
-  '0xFDa619b6d20975be80A10332cD39b9a4b0FAa8BB', // SMD
-  '0xd988097fb8612cc24eeC14542bC03424c656005f', // Native USDC
-  '0xE7798f023fC62146e8Aa1b36Da45fb70855a77Ea', // DAI
-  '0xf0F161fDA2712DB8b566946122a5af183995e2eD', // USDT
-  '0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF', // WBTC
-  '0x2416092f143378750bb29b79eD961ab195CcEea5' // Renzo ezETH
+  '0xfda619b6d20975be80a10332cd39b9a4b0faa8bb', // SMD
+  '0xd988097fb8612cc24eec14542bc03424c656005f', // Native USDC
+  '0xe7798f023fc62146e8aa1b36da45fb70855a77ea', // DAI
+  '0xf0f161fda2712db8b566946122a5af183995e2ed', // USDT
+  '0xcdd475325d6f564d27247d1dddbb0dac6fa0a5cf', // WBTC
+  '0x2416092f143378750bb29b79ed961ab195cceea5' // Renzo ezETH
 ]
 
 let STABLE_COINS: string[] = [
-  '0xd988097fb8612cc24eeC14542bC03424c656005f', // Native USDC
-  '0xE7798f023fC62146e8Aa1b36Da45fb70855a77Ea', // DAI
-  '0xf0F161fDA2712DB8b566946122a5af183995e2eD' // USDT
+  '0xd988097fb8612cc24eec14542bc03424c656005f', // Native USDC
+  '0xe7798f023fc62146e8aa1b36da45fb70855a77ea', // DAI
+  '0xf0f161fda2712db8b566946122a5af183995e2ed' // USDT
 ]
 
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('1')
